@@ -7,6 +7,14 @@
 	"items": [
 		
 			{
+				"id": "http://deanandreakis.micro.blog/2023/04/04/rust-language-a.html",
+				
+				"content_html": "<h1 id=\"rust-language-a-safer-memory-model\">Rust Language: A Safer Memory Model</h1>\n<h2 id=\"introduction\">Introduction</h2>\n<p>I am currently learning Rust and one of the most important concepts to understand is the memory model. Rust&rsquo;s memory model addresses common pitfalls of other languages, such as null pointer dereferences, buffer overflows, and data races, without the need for a garbage collector. Let&rsquo;s take a closer look at Rust&rsquo;s memory model.</p>\n<h2 id=\"the-ownership-system-a-core-concept\">The Ownership System: A Core Concept</h2>\n<p>At the heart of Rust&rsquo;s memory model is its ownership system, which ensures that every piece of data has a single owner. This system enforces three key rules:</p>\n<ol>\n<li>Each value in Rust has one, and only one, owner.</li>\n<li>When the owner goes out of scope, the value is automatically dropped (deallocated).</li>\n<li>A value can either have a single mutable reference or multiple immutable references, but not both.\nBy adhering to these rules, Rust effectively prevents double-frees and use-after-free vulnerabilities, which often lead to security issues in other languages.</li>\n</ol>\n<h2 id=\"borrowing-and-lifetimes-safe-access-to-data\">Borrowing and Lifetimes: Safe Access to Data</h2>\n<p>Rust&rsquo;s borrowing mechanism allows data to be temporarily accessed through references without violating ownership rules. Borrowing comes in two flavors: mutable and immutable. Immutable borrows permit multiple references to read data simultaneously, while mutable borrows allow only one reference to modify the data. These restrictions prevent data races and ensure safe concurrent access to shared resources.</p>\n<p>Lifetimes, another key concept in Rust, further enhance safety by ensuring that borrowed references never outlive the data they refer to. A lifetime is a compile-time annotation that specifies the scope of a reference. Rust&rsquo;s borrow checker verifies that these lifetimes are valid, thus preventing dangling pointers and use-after-free errors.</p>\n<h2 id=\"memory-management-without-a-garbage-collector\">Memory Management without a Garbage Collector</h2>\n<p>Unlike languages like Java or Python, Rust does not rely on a garbage collector to manage memory. Instead, Rust&rsquo;s ownership system automatically deallocates memory when a value&rsquo;s owner goes out of scope. This deterministic memory management allows for predictable performance and fine-grained control over resource usage, which is especially beneficial for low-level systems programming and real-time applications.</p>\n<h2 id=\"conclusion\">Conclusion</h2>\n<p>Rust&rsquo;s memory model offers a unique combination of safety and performance. By leveraging ownership, borrowing, and lifetimes, we can write code that is both memory-safe and efficient, without the overhead of a garbage collector.</p>\n",
+				"content_text": "# Rust Language: A Safer Memory Model\r\n\r\n## Introduction\r\n\r\nI am currently learning Rust and one of the most important concepts to understand is the memory model. Rust's memory model addresses common pitfalls of other languages, such as null pointer dereferences, buffer overflows, and data races, without the need for a garbage collector. Let's take a closer look at Rust's memory model.\r\n\r\n## The Ownership System: A Core Concept\r\n\r\nAt the heart of Rust's memory model is its ownership system, which ensures that every piece of data has a single owner. This system enforces three key rules:\r\n\r\n1. Each value in Rust has one, and only one, owner.\r\n2. When the owner goes out of scope, the value is automatically dropped (deallocated).\r\n3. A value can either have a single mutable reference or multiple immutable references, but not both.\r\nBy adhering to these rules, Rust effectively prevents double-frees and use-after-free vulnerabilities, which often lead to security issues in other languages.\r\n\r\n## Borrowing and Lifetimes: Safe Access to Data\r\n\r\nRust's borrowing mechanism allows data to be temporarily accessed through references without violating ownership rules. Borrowing comes in two flavors: mutable and immutable. Immutable borrows permit multiple references to read data simultaneously, while mutable borrows allow only one reference to modify the data. These restrictions prevent data races and ensure safe concurrent access to shared resources.\r\n\r\nLifetimes, another key concept in Rust, further enhance safety by ensuring that borrowed references never outlive the data they refer to. A lifetime is a compile-time annotation that specifies the scope of a reference. Rust's borrow checker verifies that these lifetimes are valid, thus preventing dangling pointers and use-after-free errors.\r\n\r\n## Memory Management without a Garbage Collector\r\n\r\nUnlike languages like Java or Python, Rust does not rely on a garbage collector to manage memory. Instead, Rust's ownership system automatically deallocates memory when a value's owner goes out of scope. This deterministic memory management allows for predictable performance and fine-grained control over resource usage, which is especially beneficial for low-level systems programming and real-time applications.\r\n\r\n## Conclusion\r\n\r\nRust's memory model offers a unique combination of safety and performance. By leveraging ownership, borrowing, and lifetimes, we can write code that is both memory-safe and efficient, without the overhead of a garbage collector.\n",
+				"date_published": "2023-04-04T14:23:21-07:00",
+				"url": "https://deanware.blog/2023/04/04/rust-language-a.html"
+			},
+			{
 				"id": "http://deanandreakis.micro.blog/2023/03/28/a-day-at.html",
 				
 				"content_html": "<p>A day at the races! We were lucky enough to go to the Arizona Nationals NHRA event on March 25, 2023.</p>\n<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>\n",
@@ -42,7 +50,7 @@
 				"id": "http://deanandreakis.micro.blog/2023/02/10/tpc-phoenix-open.html",
 				
 				"content_html": "<p>📷 2023 TPC Phoenix Open</p>\n<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>\n",
-				"content_text": "📷 2023 TPC Phoenix Open\n\n<img src=\"uploads/2023/af1e2a9854.jpg\" width=\"600\" height=\"450\" alt=\"\"><img src=\"uploads/2023/83ac9cb18f.jpg\" width=\"450\" height=\"600\" alt=\"\">\n",
+				"content_text": "📷 2023 TPC Phoenix Open\n\n<img src=\"https://cdn.uploads.micro.blog/77166/2023/af1e2a9854.jpg\" width=\"600\" height=\"450\" alt=\"\"><img src=\"https://cdn.uploads.micro.blog/77166/2023/83ac9cb18f.jpg\" width=\"450\" height=\"600\" alt=\"\">\n",
 				"date_published": "2023-02-10T13:33:50-07:00",
 				"url": "https://deanware.blog/2023/02/10/tpc-phoenix-open.html"
 			},
@@ -50,7 +58,7 @@
 				"id": "http://deanandreakis.micro.blog/2023/01/30/attended-the-barrettjackson.html",
 				
 				"content_html": "<p>📷 Attended the <a href=\"https://www.barrett-jackson.com/Events/Event/Home/Scottsdale-2023/ab1e8b14-6a68-41aa-becb-8942d5d2b9fa\">Barrett-Jackson</a> car show and auction in Scottsdale AZ.</p>\n<p><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --></p>\n",
-				"content_text": "📷 Attended the [Barrett-Jackson](https://www.barrett-jackson.com/Events/Event/Home/Scottsdale-2023/ab1e8b14-6a68-41aa-becb-8942d5d2b9fa) car show and auction in Scottsdale AZ. \n\n<img src=\"uploads/2023/9a4af32236.jpg\" width=\"450\" height=\"600\" alt=\"\"><img src=\"uploads/2023/6a0e8b2920.jpg\" width=\"600\" height=\"450\" alt=\"\"><img src=\"uploads/2023/8f68f0fadf.jpg\" width=\"450\" height=\"600\" alt=\"\">\n",
+				"content_text": "📷 Attended the [Barrett-Jackson](https://www.barrett-jackson.com/Events/Event/Home/Scottsdale-2023/ab1e8b14-6a68-41aa-becb-8942d5d2b9fa) car show and auction in Scottsdale AZ. \n\n<img src=\"https://cdn.uploads.micro.blog/77166/2023/9a4af32236.jpg\" width=\"450\" height=\"600\" alt=\"\"><img src=\"https://cdn.uploads.micro.blog/77166/2023/6a0e8b2920.jpg\" width=\"600\" height=\"450\" alt=\"\"><img src=\"https://cdn.uploads.micro.blog/77166/2023/8f68f0fadf.jpg\" width=\"450\" height=\"600\" alt=\"\">\n",
 				"date_published": "2023-01-30T11:58:06-07:00",
 				"url": "https://deanware.blog/2023/01/30/attended-the-barrettjackson.html"
 			},
@@ -58,7 +66,7 @@
 				"id": "http://deanandreakis.micro.blog/2023/01/25/horseshoe-bend-during.html",
 				
 				"content_html": "<p>📷 <a href=\"https://en.wikipedia.org/wiki/Horseshoe_Bend_(Arizona)\">Horseshoe Bend</a> during snowfall</p>\n<!-- raw HTML omitted -->\n",
-				"content_text": "📷 [Horseshoe Bend](https://en.wikipedia.org/wiki/Horseshoe_Bend_(Arizona)) during snowfall\r\n\r\n\n\n<img src=\"uploads/2023/fc2a9b2a62.jpg\" width=\"600\" height=\"450\" alt=\"\">\n",
+				"content_text": "📷 [Horseshoe Bend](https://en.wikipedia.org/wiki/Horseshoe_Bend_(Arizona)) during snowfall\r\n\r\n\n\n<img src=\"https://cdn.uploads.micro.blog/77166/2023/fc2a9b2a62.jpg\" width=\"600\" height=\"450\" alt=\"\">\n",
 				"date_published": "2023-01-25T13:53:55-07:00",
 				"url": "https://deanware.blog/2023/01/25/horseshoe-bend-during.html"
 			},
@@ -66,7 +74,7 @@
 				"id": "http://deanandreakis.micro.blog/2023/01/24/another-beautiful-sunset.html",
 				
 				"content_html": "<p>📷 Another beautiful sunset</p>\n<!-- raw HTML omitted -->\n",
-				"content_text": "📷 Another beautiful sunset\n\n<img src=\"uploads/2023/2a425f70ed.jpg\" width=\"600\" height=\"353\" alt=\"\">\n",
+				"content_text": "📷 Another beautiful sunset\n\n<img src=\"https://cdn.uploads.micro.blog/77166/2023/2a425f70ed.jpg\" width=\"600\" height=\"353\" alt=\"\">\n",
 				"date_published": "2023-01-24T09:48:31-07:00",
 				"url": "https://deanware.blog/2023/01/24/another-beautiful-sunset.html"
 			},
@@ -74,7 +82,7 @@
 				"id": "http://deanandreakis.micro.blog/2023/01/19/i-am-lucky.html",
 				
 				"content_html": "<p>I am lucky enough to live near an area that hosts hot air balloon rides. I wake up many mornings with this view out of my bedroom window:\n📷</p>\n<!-- raw HTML omitted -->\n",
-				"content_text": "I am lucky enough to live near an area that hosts hot air balloon rides. I wake up many mornings with this view out of my bedroom window:\n📷\n\n\n<img src=\"uploads/2023/96ad862885.jpg\" width=\"600\" height=\"493\" alt=\"\">\n",
+				"content_text": "I am lucky enough to live near an area that hosts hot air balloon rides. I wake up many mornings with this view out of my bedroom window:\n📷\n\n\n<img src=\"https://cdn.uploads.micro.blog/77166/2023/96ad862885.jpg\" width=\"600\" height=\"493\" alt=\"\">\n",
 				"date_published": "2023-01-19T10:12:22-07:00",
 				"url": "https://deanware.blog/2023/01/19/i-am-lucky.html"
 			},
@@ -82,7 +90,7 @@
 				"id": "http://deanandreakis.micro.blog/2023/01/18/placed-my-order.html",
 				
 				"content_html": "<p>Placed my order for a new M2 mac mini. I currently use a 2017 27&quot; iMac w/ a core i5 processor so this should be a major speed bump.</p>\n<!-- raw HTML omitted -->\n",
-				"content_text": "Placed my order for a new M2 mac mini. I currently use a 2017 27\" iMac w/ a core i5 processor so this should be a major speed bump.\n\n\n\n<img src=\"uploads/2023/b8b95e6edd.png\" width=\"600\" height=\"197\" alt=\"\">\n",
+				"content_text": "Placed my order for a new M2 mac mini. I currently use a 2017 27\" iMac w/ a core i5 processor so this should be a major speed bump.\n\n\n\n<img src=\"https://cdn.uploads.micro.blog/77166/2023/b8b95e6edd.png\" width=\"600\" height=\"197\" alt=\"\">\n",
 				"date_published": "2023-01-18T12:22:24-07:00",
 				"url": "https://deanware.blog/2023/01/18/placed-my-order.html"
 			},
@@ -90,7 +98,7 @@
 				"id": "http://deanandreakis.micro.blog/2023/01/17/hanging-out-with.html",
 				
 				"content_html": "<p>Hanging out with Grover</p>\n<!-- raw HTML omitted -->\n",
-				"content_text": "Hanging out with Grover \n\n<img src=\"uploads/2023/9abb4dc680.jpg\" width=\"600\" height=\"600\" alt=\"\">\n",
+				"content_text": "Hanging out with Grover \n\n<img src=\"https://cdn.uploads.micro.blog/77166/2023/9abb4dc680.jpg\" width=\"600\" height=\"600\" alt=\"\">\n",
 				"date_published": "2023-01-17T10:54:38-07:00",
 				"url": "https://deanware.blog/2023/01/17/hanging-out-with.html"
 			},
@@ -98,7 +106,7 @@
 				"id": "http://deanandreakis.micro.blog/2022/08/01/backyard-sunset.html",
 				
 				"content_html": "<p>Backyard sunset</p>\n<!-- raw HTML omitted -->\n",
-				"content_text": "Backyard sunset\n\n<img src=\"uploads/2022/2ce617622d.jpg\" width=\"600\" height=\"600\" alt=\"\" />\n",
+				"content_text": "Backyard sunset\n\n<img src=\"https://deanandreakis.micro.blog/uploads/2022/2ce617622d.jpg\" width=\"600\" height=\"600\" alt=\"\" />\n",
 				"date_published": "2022-07-31T19:50:03-07:00",
 				"url": "https://deanware.blog/2022/08/01/backyard-sunset.html"
 			}
