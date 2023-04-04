@@ -25,6 +25,34 @@
 	  <div class="h-entry">
 		
 
+		<a href="https://deanware.blog/2023/04/04/rust-language-a.html" class="u-url"><time class="dt-published" datetime="2023-04-04 14:23:21 -0700">Apr 4, 2023</time></a>
+
+		<div class="e-content">
+			 <h1 id="rust-language-a-safer-memory-model">Rust Language: A Safer Memory Model</h1>
+<h2 id="introduction">Introduction</h2>
+<p>I am currently learning Rust and one of the most important concepts to understand is the memory model. Rust&rsquo;s memory model addresses common pitfalls of other languages, such as null pointer dereferences, buffer overflows, and data races, without the need for a garbage collector. Let&rsquo;s take a closer look at Rust&rsquo;s memory model.</p>
+<h2 id="the-ownership-system-a-core-concept">The Ownership System: A Core Concept</h2>
+<p>At the heart of Rust&rsquo;s memory model is its ownership system, which ensures that every piece of data has a single owner. This system enforces three key rules:</p>
+<ol>
+<li>Each value in Rust has one, and only one, owner.</li>
+<li>When the owner goes out of scope, the value is automatically dropped (deallocated).</li>
+<li>A value can either have a single mutable reference or multiple immutable references, but not both.
+By adhering to these rules, Rust effectively prevents double-frees and use-after-free vulnerabilities, which often lead to security issues in other languages.</li>
+</ol>
+<h2 id="borrowing-and-lifetimes-safe-access-to-data">Borrowing and Lifetimes: Safe Access to Data</h2>
+<p>Rust&rsquo;s borrowing mechanism allows data to be temporarily accessed through references without violating ownership rules. Borrowing comes in two flavors: mutable and immutable. Immutable borrows permit multiple references to read data simultaneously, while mutable borrows allow only one reference to modify the data. These restrictions prevent data races and ensure safe concurrent access to shared resources.</p>
+<p>Lifetimes, another key concept in Rust, further enhance safety by ensuring that borrowed references never outlive the data they refer to. A lifetime is a compile-time annotation that specifies the scope of a reference. Rust&rsquo;s borrow checker verifies that these lifetimes are valid, thus preventing dangling pointers and use-after-free errors.</p>
+<h2 id="memory-management-without-a-garbage-collector">Memory Management without a Garbage Collector</h2>
+<p>Unlike languages like Java or Python, Rust does not rely on a garbage collector to manage memory. Instead, Rust&rsquo;s ownership system automatically deallocates memory when a value&rsquo;s owner goes out of scope. This deterministic memory management allows for predictable performance and fine-grained control over resource usage, which is especially beneficial for low-level systems programming and real-time applications.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Rust&rsquo;s memory model offers a unique combination of safety and performance. By leveraging ownership, borrowing, and lifetimes, we can write code that is both memory-safe and efficient, without the overhead of a garbage collector.</p>
+
+		</div>
+	  </div>
+	
+	  <div class="h-entry">
+		
+
 		<a href="https://deanware.blog/2023/03/28/a-day-at.html" class="u-url"><time class="dt-published" datetime="2023-03-28 11:06:32 -0700">Mar 28, 2023</time></a>
 
 		<div class="e-content">
