@@ -24,6 +24,38 @@
 	
 	  <div class="h-entry">
 		
+			<h1><a href="https://deanware.blog/2023/05/04/introduction-to-lifetimes.html">Introduction to Lifetimes in Rust</a></h1>
+		
+
+		<a href="https://deanware.blog/2023/05/04/introduction-to-lifetimes.html" class="u-url"><time class="dt-published" datetime="2023-05-04 14:55:53 -0700">May 4, 2023</time></a>
+
+		<div class="e-content">
+			 <h2 id="introduction">Introduction</h2>
+<p>Lifetimes in Rust are a way for the compiler to ensure memory safety by tracking and enforcing the lifetime of a variable. Lifetimes are a way of managing memory ownership and avoiding issues like dangling pointers.</p>
+<p>In Rust, variables can be borrowed by other variables or passed by reference to functions. However, the language also needs to ensure that the borrowed variable does not outlive the owner of that variable.</p>
+<p>This is where lifetimes come in. Each variable has a specific lifetime, which is determined by its scope. The lifetime of a variable represents the duration of time in which it is valid and can be accessed.</p>
+<p>When a variable is borrowed, the compiler verifies that the lifetime of the borrowed variable is within the scope of the owner variable. If the lifetime of the borrowed variable is longer than the lifetime of the owner variable, the Rust compiler will issue an error. This prevents dangling pointers and eliminates the need for garbage collection.</p>
+<p>Lifetimes are denoted by single quotes ('), and they can be specified in function signatures, structs, and other data types. You can also use the &lsquo;static lifetime for variables that live throughout the entire lifetime of the program.</p>
+<h2 id="example">Example</h2>
+<pre tabindex="0"><code>struct Foo&lt;'a&gt; {
+    x: &amp;'a str,
+}
+
+impl&lt;'a&gt; Foo&lt;'a&gt; {
+    fn new(x: &amp;'a str) -&gt; Foo&lt;'a&gt; {
+        Foo {
+            x: x,
+        }
+    }
+}
+</code></pre><p>In this example, we define a <code>Foo</code> struct that has a reference to a string slice as its only field. We use the lifetime specifier <code>'a</code> to indicate that the reference is valid for the lifetime of the <code>Foo</code> struct.</p>
+<p>There&rsquo;s a lot more to know about lifetimes in Rust, but hopefully this gives you a good starting point!</p>
+
+		</div>
+	  </div>
+	
+	  <div class="h-entry">
+		
 			<h1><a href="https://deanware.blog/2023/04/12/error-handling-in.html">Error Handling in Rust</a></h1>
 		
 
