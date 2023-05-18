@@ -37,18 +37,18 @@
 <p>When a variable is borrowed, the compiler verifies that the lifetime of the borrowed variable is within the scope of the owner variable. If the lifetime of the borrowed variable is longer than the lifetime of the owner variable, the Rust compiler will issue an error. This prevents dangling pointers and eliminates the need for garbage collection.</p>
 <p>Lifetimes are denoted by single quotes ('), and they can be specified in function signatures, structs, and other data types. You can also use the &lsquo;static lifetime for variables that live throughout the entire lifetime of the program.</p>
 <h2 id="example">Example</h2>
-<pre tabindex="0"><code>struct Foo&lt;'a&gt; {
-    x: &amp;'a str,
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rust" data-lang="rust"><span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">Foo</span><span style="color:#f92672">&lt;&#39;</span><span style="color:#a6e22e">a</span><span style="color:#f92672">&gt;</span> {
+    x: <span style="color:#66d9ef">&amp;</span><span style="color:#f92672">&#39;</span><span style="color:#a6e22e">a</span> <span style="color:#66d9ef">str</span>,
 }
 
-impl&lt;'a&gt; Foo&lt;'a&gt; {
-    fn new(x: &amp;'a str) -&gt; Foo&lt;'a&gt; {
+<span style="color:#66d9ef">impl</span><span style="color:#f92672">&lt;&#39;</span><span style="color:#a6e22e">a</span><span style="color:#f92672">&gt;</span> Foo<span style="color:#f92672">&lt;&#39;</span><span style="color:#a6e22e">a</span><span style="color:#f92672">&gt;</span> {
+    <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">new</span>(x: <span style="color:#66d9ef">&amp;</span><span style="color:#f92672">&#39;</span><span style="color:#a6e22e">a</span> <span style="color:#66d9ef">str</span>) -&gt; <span style="color:#a6e22e">Foo</span><span style="color:#f92672">&lt;&#39;</span><span style="color:#a6e22e">a</span><span style="color:#f92672">&gt;</span> {
         Foo {
-            x: x,
+            x: <span style="color:#a6e22e">x</span>,
         }
     }
 }
-</code></pre><p>In this example, we define a <code>Foo</code> struct that has a reference to a string slice as its only field. We use the lifetime specifier <code>'a</code> to indicate that the reference is valid for the lifetime of the <code>Foo</code> struct.</p>
+</code></pre></div><p>In this example, we define a <code>Foo</code> struct that has a reference to a string slice as its only field. We use the lifetime specifier <code>'a</code> to indicate that the reference is valid for the lifetime of the <code>Foo</code> struct.</p>
 <p>There&rsquo;s a lot more to know about lifetimes in Rust, but hopefully this gives you a good starting point!</p>
 
 		</div>
