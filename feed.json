@@ -9,8 +9,8 @@
 			{
 				"id": "http://deanandreakis.micro.blog/2023/05/04/introduction-to-lifetimes.html",
 				"title": "Introduction to Lifetimes in Rust",
-				"content_html": "<h2 id=\"introduction\">Introduction</h2>\n<p>Lifetimes in Rust are a way for the compiler to ensure memory safety by tracking and enforcing the lifetime of a variable. Lifetimes are a way of managing memory ownership and avoiding issues like dangling pointers.</p>\n<p>In Rust, variables can be borrowed by other variables or passed by reference to functions. However, the language also needs to ensure that the borrowed variable does not outlive the owner of that variable.</p>\n<p>This is where lifetimes come in. Each variable has a specific lifetime, which is determined by its scope. The lifetime of a variable represents the duration of time in which it is valid and can be accessed.</p>\n<p>When a variable is borrowed, the compiler verifies that the lifetime of the borrowed variable is within the scope of the owner variable. If the lifetime of the borrowed variable is longer than the lifetime of the owner variable, the Rust compiler will issue an error. This prevents dangling pointers and eliminates the need for garbage collection.</p>\n<p>Lifetimes are denoted by single quotes ('), and they can be specified in function signatures, structs, and other data types. You can also use the &lsquo;static lifetime for variables that live throughout the entire lifetime of the program.</p>\n<h2 id=\"example\">Example</h2>\n<pre tabindex=\"0\"><code>struct Foo&lt;'a&gt; {\r\n    x: &amp;'a str,\r\n}\r\n\r\nimpl&lt;'a&gt; Foo&lt;'a&gt; {\r\n    fn new(x: &amp;'a str) -&gt; Foo&lt;'a&gt; {\r\n        Foo {\r\n            x: x,\r\n        }\r\n    }\r\n}\r\n</code></pre><p>In this example, we define a <code>Foo</code> struct that has a reference to a string slice as its only field. We use the lifetime specifier <code>'a</code> to indicate that the reference is valid for the lifetime of the <code>Foo</code> struct.</p>\n<p>There&rsquo;s a lot more to know about lifetimes in Rust, but hopefully this gives you a good starting point!</p>\n",
-				"content_text": "## Introduction\r\nLifetimes in Rust are a way for the compiler to ensure memory safety by tracking and enforcing the lifetime of a variable. Lifetimes are a way of managing memory ownership and avoiding issues like dangling pointers.\r\n\r\nIn Rust, variables can be borrowed by other variables or passed by reference to functions. However, the language also needs to ensure that the borrowed variable does not outlive the owner of that variable.\r\n\r\nThis is where lifetimes come in. Each variable has a specific lifetime, which is determined by its scope. The lifetime of a variable represents the duration of time in which it is valid and can be accessed.\r\n\r\nWhen a variable is borrowed, the compiler verifies that the lifetime of the borrowed variable is within the scope of the owner variable. If the lifetime of the borrowed variable is longer than the lifetime of the owner variable, the Rust compiler will issue an error. This prevents dangling pointers and eliminates the need for garbage collection.\r\n\r\nLifetimes are denoted by single quotes ('), and they can be specified in function signatures, structs, and other data types. You can also use the 'static lifetime for variables that live throughout the entire lifetime of the program.\r\n\r\n## Example\r\n\r\n~~~\r\nstruct Foo<'a> {\r\n    x: &'a str,\r\n}\r\n\r\nimpl<'a> Foo<'a> {\r\n    fn new(x: &'a str) -> Foo<'a> {\r\n        Foo {\r\n            x: x,\r\n        }\r\n    }\r\n}\r\n~~~\r\n\r\nIn this example, we define a `Foo` struct that has a reference to a string slice as its only field. We use the lifetime specifier `'a` to indicate that the reference is valid for the lifetime of the `Foo` struct.\r\n\r\nThere's a lot more to know about lifetimes in Rust, but hopefully this gives you a good starting point!\n",
+				"content_html": "<h2 id=\"introduction\">Introduction</h2>\n<p>Lifetimes in Rust are a way for the compiler to ensure memory safety by tracking and enforcing the lifetime of a variable. Lifetimes are a way of managing memory ownership and avoiding issues like dangling pointers.</p>\n<p>In Rust, variables can be borrowed by other variables or passed by reference to functions. However, the language also needs to ensure that the borrowed variable does not outlive the owner of that variable.</p>\n<p>This is where lifetimes come in. Each variable has a specific lifetime, which is determined by its scope. The lifetime of a variable represents the duration of time in which it is valid and can be accessed.</p>\n<p>When a variable is borrowed, the compiler verifies that the lifetime of the borrowed variable is within the scope of the owner variable. If the lifetime of the borrowed variable is longer than the lifetime of the owner variable, the Rust compiler will issue an error. This prevents dangling pointers and eliminates the need for garbage collection.</p>\n<p>Lifetimes are denoted by single quotes ('), and they can be specified in function signatures, structs, and other data types. You can also use the &lsquo;static lifetime for variables that live throughout the entire lifetime of the program.</p>\n<h2 id=\"example\">Example</h2>\n<div class=\"highlight\"><pre tabindex=\"0\" style=\"color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4\"><code class=\"language-rust\" data-lang=\"rust\"><span style=\"color:#66d9ef\">struct</span> <span style=\"color:#a6e22e\">Foo</span><span style=\"color:#f92672\">&lt;&#39;</span><span style=\"color:#a6e22e\">a</span><span style=\"color:#f92672\">&gt;</span> {\n    x: <span style=\"color:#66d9ef\">&amp;</span><span style=\"color:#f92672\">&#39;</span><span style=\"color:#a6e22e\">a</span> <span style=\"color:#66d9ef\">str</span>,\n}\n\n<span style=\"color:#66d9ef\">impl</span><span style=\"color:#f92672\">&lt;&#39;</span><span style=\"color:#a6e22e\">a</span><span style=\"color:#f92672\">&gt;</span> Foo<span style=\"color:#f92672\">&lt;&#39;</span><span style=\"color:#a6e22e\">a</span><span style=\"color:#f92672\">&gt;</span> {\n    <span style=\"color:#66d9ef\">fn</span> <span style=\"color:#a6e22e\">new</span>(x: <span style=\"color:#66d9ef\">&amp;</span><span style=\"color:#f92672\">&#39;</span><span style=\"color:#a6e22e\">a</span> <span style=\"color:#66d9ef\">str</span>) -&gt; <span style=\"color:#a6e22e\">Foo</span><span style=\"color:#f92672\">&lt;&#39;</span><span style=\"color:#a6e22e\">a</span><span style=\"color:#f92672\">&gt;</span> {\n        Foo {\n            x: <span style=\"color:#a6e22e\">x</span>,\n        }\n    }\n}\n</code></pre></div><p>In this example, we define a <code>Foo</code> struct that has a reference to a string slice as its only field. We use the lifetime specifier <code>'a</code> to indicate that the reference is valid for the lifetime of the <code>Foo</code> struct.</p>\n<p>There&rsquo;s a lot more to know about lifetimes in Rust, but hopefully this gives you a good starting point!</p>\n",
+				"content_text": "## Introduction\nLifetimes in Rust are a way for the compiler to ensure memory safety by tracking and enforcing the lifetime of a variable. Lifetimes are a way of managing memory ownership and avoiding issues like dangling pointers.\n\nIn Rust, variables can be borrowed by other variables or passed by reference to functions. However, the language also needs to ensure that the borrowed variable does not outlive the owner of that variable.\n\nThis is where lifetimes come in. Each variable has a specific lifetime, which is determined by its scope. The lifetime of a variable represents the duration of time in which it is valid and can be accessed.\n\nWhen a variable is borrowed, the compiler verifies that the lifetime of the borrowed variable is within the scope of the owner variable. If the lifetime of the borrowed variable is longer than the lifetime of the owner variable, the Rust compiler will issue an error. This prevents dangling pointers and eliminates the need for garbage collection.\n\nLifetimes are denoted by single quotes ('), and they can be specified in function signatures, structs, and other data types. You can also use the 'static lifetime for variables that live throughout the entire lifetime of the program.\n\n## Example\n\n~~~rust\nstruct Foo<'a> {\n    x: &'a str,\n}\n\nimpl<'a> Foo<'a> {\n    fn new(x: &'a str) -> Foo<'a> {\n        Foo {\n            x: x,\n        }\n    }\n}\n~~~\n\nIn this example, we define a `Foo` struct that has a reference to a string slice as its only field. We use the lifetime specifier `'a` to indicate that the reference is valid for the lifetime of the `Foo` struct.\n\nThere's a lot more to know about lifetimes in Rust, but hopefully this gives you a good starting point!\n",
 				"date_published": "2023-05-04T14:55:53-07:00",
 				"url": "https://deanware.blog/2023/05/04/introduction-to-lifetimes.html"
 			},
@@ -58,7 +58,7 @@
 				"id": "http://deanandreakis.micro.blog/2023/03/15/grover-enjoying-the.html",
 				
 				"content_html": "<p>📷 Grover enjoying the weather</p>\n<!-- raw HTML omitted -->\n",
-				"content_text": "📷 Grover enjoying the weather\n\n<img src=\"uploads/2023/5709176a0e.jpg\" width=\"600\" height=\"450\" alt=\"\">\n",
+				"content_text": "📷 Grover enjoying the weather\n\n<img src=\"https://cdn.uploads.micro.blog/77166/2023/5709176a0e.jpg\" width=\"600\" height=\"450\" alt=\"\">\n",
 				"date_published": "2023-03-15T13:37:32-07:00",
 				"url": "https://deanware.blog/2023/03/15/grover-enjoying-the.html"
 			},
@@ -66,7 +66,7 @@
 				"id": "http://deanandreakis.micro.blog/2023/02/10/tpc-phoenix-open.html",
 				
 				"content_html": "<p>📷 2023 TPC Phoenix Open</p>\n<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>\n",
-				"content_text": "📷 2023 TPC Phoenix Open\n\n<img src=\"uploads/2023/af1e2a9854.jpg\" width=\"600\" height=\"450\" alt=\"\"><img src=\"uploads/2023/83ac9cb18f.jpg\" width=\"450\" height=\"600\" alt=\"\">\n",
+				"content_text": "📷 2023 TPC Phoenix Open\n\n<img src=\"https://cdn.uploads.micro.blog/77166/2023/af1e2a9854.jpg\" width=\"600\" height=\"450\" alt=\"\"><img src=\"https://cdn.uploads.micro.blog/77166/2023/83ac9cb18f.jpg\" width=\"450\" height=\"600\" alt=\"\">\n",
 				"date_published": "2023-02-10T13:33:50-07:00",
 				"url": "https://deanware.blog/2023/02/10/tpc-phoenix-open.html"
 			},
@@ -74,7 +74,7 @@
 				"id": "http://deanandreakis.micro.blog/2023/01/30/attended-the-barrettjackson.html",
 				
 				"content_html": "<p>📷 Attended the <a href=\"https://www.barrett-jackson.com/Events/Event/Home/Scottsdale-2023/ab1e8b14-6a68-41aa-becb-8942d5d2b9fa\">Barrett-Jackson</a> car show and auction in Scottsdale AZ.</p>\n<p><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --></p>\n",
-				"content_text": "📷 Attended the [Barrett-Jackson](https://www.barrett-jackson.com/Events/Event/Home/Scottsdale-2023/ab1e8b14-6a68-41aa-becb-8942d5d2b9fa) car show and auction in Scottsdale AZ. \n\n<img src=\"uploads/2023/9a4af32236.jpg\" width=\"450\" height=\"600\" alt=\"\"><img src=\"uploads/2023/6a0e8b2920.jpg\" width=\"600\" height=\"450\" alt=\"\"><img src=\"uploads/2023/8f68f0fadf.jpg\" width=\"450\" height=\"600\" alt=\"\">\n",
+				"content_text": "📷 Attended the [Barrett-Jackson](https://www.barrett-jackson.com/Events/Event/Home/Scottsdale-2023/ab1e8b14-6a68-41aa-becb-8942d5d2b9fa) car show and auction in Scottsdale AZ. \n\n<img src=\"https://cdn.uploads.micro.blog/77166/2023/9a4af32236.jpg\" width=\"450\" height=\"600\" alt=\"\"><img src=\"https://cdn.uploads.micro.blog/77166/2023/6a0e8b2920.jpg\" width=\"600\" height=\"450\" alt=\"\"><img src=\"https://cdn.uploads.micro.blog/77166/2023/8f68f0fadf.jpg\" width=\"450\" height=\"600\" alt=\"\">\n",
 				"date_published": "2023-01-30T11:58:06-07:00",
 				"url": "https://deanware.blog/2023/01/30/attended-the-barrettjackson.html"
 			},
@@ -82,7 +82,7 @@
 				"id": "http://deanandreakis.micro.blog/2023/01/25/horseshoe-bend-during.html",
 				
 				"content_html": "<p>📷 <a href=\"https://en.wikipedia.org/wiki/Horseshoe_Bend_(Arizona)\">Horseshoe Bend</a> during snowfall</p>\n<!-- raw HTML omitted -->\n",
-				"content_text": "📷 [Horseshoe Bend](https://en.wikipedia.org/wiki/Horseshoe_Bend_(Arizona)) during snowfall\r\n\r\n\n\n<img src=\"uploads/2023/fc2a9b2a62.jpg\" width=\"600\" height=\"450\" alt=\"\">\n",
+				"content_text": "📷 [Horseshoe Bend](https://en.wikipedia.org/wiki/Horseshoe_Bend_(Arizona)) during snowfall\r\n\r\n\n\n<img src=\"https://cdn.uploads.micro.blog/77166/2023/fc2a9b2a62.jpg\" width=\"600\" height=\"450\" alt=\"\">\n",
 				"date_published": "2023-01-25T13:53:55-07:00",
 				"url": "https://deanware.blog/2023/01/25/horseshoe-bend-during.html"
 			},
@@ -90,7 +90,7 @@
 				"id": "http://deanandreakis.micro.blog/2023/01/24/another-beautiful-sunset.html",
 				
 				"content_html": "<p>📷 Another beautiful sunset</p>\n<!-- raw HTML omitted -->\n",
-				"content_text": "📷 Another beautiful sunset\n\n<img src=\"uploads/2023/2a425f70ed.jpg\" width=\"600\" height=\"353\" alt=\"\">\n",
+				"content_text": "📷 Another beautiful sunset\n\n<img src=\"https://cdn.uploads.micro.blog/77166/2023/2a425f70ed.jpg\" width=\"600\" height=\"353\" alt=\"\">\n",
 				"date_published": "2023-01-24T09:48:31-07:00",
 				"url": "https://deanware.blog/2023/01/24/another-beautiful-sunset.html"
 			},
@@ -98,7 +98,7 @@
 				"id": "http://deanandreakis.micro.blog/2023/01/19/i-am-lucky.html",
 				
 				"content_html": "<p>I am lucky enough to live near an area that hosts hot air balloon rides. I wake up many mornings with this view out of my bedroom window:\n📷</p>\n<!-- raw HTML omitted -->\n",
-				"content_text": "I am lucky enough to live near an area that hosts hot air balloon rides. I wake up many mornings with this view out of my bedroom window:\n📷\n\n\n<img src=\"uploads/2023/96ad862885.jpg\" width=\"600\" height=\"493\" alt=\"\">\n",
+				"content_text": "I am lucky enough to live near an area that hosts hot air balloon rides. I wake up many mornings with this view out of my bedroom window:\n📷\n\n\n<img src=\"https://cdn.uploads.micro.blog/77166/2023/96ad862885.jpg\" width=\"600\" height=\"493\" alt=\"\">\n",
 				"date_published": "2023-01-19T10:12:22-07:00",
 				"url": "https://deanware.blog/2023/01/19/i-am-lucky.html"
 			},
@@ -106,7 +106,7 @@
 				"id": "http://deanandreakis.micro.blog/2023/01/18/placed-my-order.html",
 				
 				"content_html": "<p>Placed my order for a new M2 mac mini. I currently use a 2017 27&quot; iMac w/ a core i5 processor so this should be a major speed bump.</p>\n<!-- raw HTML omitted -->\n",
-				"content_text": "Placed my order for a new M2 mac mini. I currently use a 2017 27\" iMac w/ a core i5 processor so this should be a major speed bump.\n\n\n\n<img src=\"uploads/2023/b8b95e6edd.png\" width=\"600\" height=\"197\" alt=\"\">\n",
+				"content_text": "Placed my order for a new M2 mac mini. I currently use a 2017 27\" iMac w/ a core i5 processor so this should be a major speed bump.\n\n\n\n<img src=\"https://cdn.uploads.micro.blog/77166/2023/b8b95e6edd.png\" width=\"600\" height=\"197\" alt=\"\">\n",
 				"date_published": "2023-01-18T12:22:24-07:00",
 				"url": "https://deanware.blog/2023/01/18/placed-my-order.html"
 			},
@@ -114,7 +114,7 @@
 				"id": "http://deanandreakis.micro.blog/2023/01/17/hanging-out-with.html",
 				
 				"content_html": "<p>Hanging out with Grover</p>\n<!-- raw HTML omitted -->\n",
-				"content_text": "Hanging out with Grover \n\n<img src=\"uploads/2023/9abb4dc680.jpg\" width=\"600\" height=\"600\" alt=\"\">\n",
+				"content_text": "Hanging out with Grover \n\n<img src=\"https://cdn.uploads.micro.blog/77166/2023/9abb4dc680.jpg\" width=\"600\" height=\"600\" alt=\"\">\n",
 				"date_published": "2023-01-17T10:54:38-07:00",
 				"url": "https://deanware.blog/2023/01/17/hanging-out-with.html"
 			},
@@ -122,7 +122,7 @@
 				"id": "http://deanandreakis.micro.blog/2022/08/01/backyard-sunset.html",
 				
 				"content_html": "<p>Backyard sunset</p>\n<!-- raw HTML omitted -->\n",
-				"content_text": "Backyard sunset\n\n<img src=\"uploads/2022/2ce617622d.jpg\" width=\"600\" height=\"600\" alt=\"\" />\n",
+				"content_text": "Backyard sunset\n\n<img src=\"https://deanandreakis.micro.blog/uploads/2022/2ce617622d.jpg\" width=\"600\" height=\"600\" alt=\"\" />\n",
 				"date_published": "2022-07-31T19:50:03-07:00",
 				"url": "https://deanware.blog/2022/08/01/backyard-sunset.html"
 			}
