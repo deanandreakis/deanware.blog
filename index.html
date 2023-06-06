@@ -24,6 +24,69 @@
 	
 	  <div class="h-entry">
 		
+			<h1><a href="https://deanware.blog/2023/06/06/rust-generic-data.html">Rust: Generic Data Types</a></h1>
+		
+
+		<a href="https://deanware.blog/2023/06/06/rust-generic-data.html" class="u-url"><time class="dt-published" datetime="2023-06-06 11:00:44 -0700">Jun 6, 2023</time></a>
+
+		<div class="e-content">
+			 <p>Introduction:</p>
+<p>Rust is a statically typed language that is designed for systems programming. It has a strong type system that empowers developers to write safe and correct code. Rust provides the facility of generic programming through which you can create functions, structs, and enums independent of any specific data type. In this blog, we&rsquo;ll look at the fundamentals of generic data types in Rust.</p>
+<p>Generic Data Types:</p>
+<p>A generic data type is a type that is not specific to a particular data type. Instead, it can be used with any data type. Generic data types are used to create more flexible and reusable code. Rust provides two ways to define generic data types i.e., through functions and through structs.</p>
+<ol>
+<li>Generic Functions:</li>
+</ol>
+<p>Generic functions are defined using angle brackets. You can denote any type with a generic type parameter. Here&rsquo;s an example of a simple generic add-function that adds two numbers of any known type:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rust" data-lang="rust"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">add</span><span style="color:#f92672">&lt;</span>T<span style="color:#f92672">&gt;</span>(a: <span style="color:#a6e22e">T</span>, b: <span style="color:#a6e22e">T</span>) -&gt; <span style="color:#a6e22e">T</span> {
+    a <span style="color:#f92672">+</span> b
+}
+
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+    <span style="color:#66d9ef">let</span> sum <span style="color:#f92672">=</span> add(<span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>);
+    println!(<span style="color:#e6db74">&#34;{}&#34;</span>, sum); <span style="color:#75715e">// prints 9
+</span><span style="color:#75715e"></span>}
+</code></pre></div><p>In the above code, <code>T</code> is the generic type parameter. It can be any type that can be added. In the main function, we call the add function with two integer literals. The result of adding them is assigned to <code>sum</code>. Finally, the value of <code>sum</code> is printed, which is 9, in this case.</p>
+<ol start="2">
+<li>Generic Structs:</li>
+</ol>
+<p>You can also use generic data types in Rust to declare generic structs. Similar to functions, generic structs use angle brackets to denote a generic type parameter. Here&rsquo;s an example of a simple generic linked list struct:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rust" data-lang="rust"><span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">ListNode</span><span style="color:#f92672">&lt;</span>T<span style="color:#f92672">&gt;</span> {
+    val: <span style="color:#a6e22e">T</span>,
+    next: Option<span style="color:#f92672">&lt;</span>Box<span style="color:#f92672">&lt;</span>ListNode<span style="color:#f92672">&lt;</span>T<span style="color:#f92672">&gt;&gt;&gt;</span>,
+}
+
+<span style="color:#66d9ef">impl</span><span style="color:#f92672">&lt;</span>T<span style="color:#f92672">&gt;</span> ListNode<span style="color:#f92672">&lt;</span>T<span style="color:#f92672">&gt;</span> {
+    <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">new</span>(val: <span style="color:#a6e22e">T</span>) -&gt; <span style="color:#a6e22e">Self</span> {
+        ListNode { val, next: None }
+    }
+
+    <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">append</span>(<span style="color:#f92672">&amp;</span><span style="color:#66d9ef">mut</span> self, val: <span style="color:#a6e22e">T</span>) {
+        <span style="color:#66d9ef">match</span> <span style="color:#f92672">&amp;</span><span style="color:#66d9ef">mut</span> self.next {
+            Some(next) <span style="color:#f92672">=&gt;</span> next.append(val),
+            None <span style="color:#f92672">=&gt;</span> self.next <span style="color:#f92672">=</span> Some(Box::new(ListNode::new(val))),
+        }
+    }
+}
+
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+    <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> list <span style="color:#f92672">=</span> ListNode::new(<span style="color:#ae81ff">1</span>);
+    list.append(<span style="color:#ae81ff">2</span>);
+    list.append(<span style="color:#ae81ff">3</span>);
+
+    println!(<span style="color:#e6db74">&#34;{:?}&#34;</span>, list); <span style="color:#75715e">// prints ListNode { val: 1, next: Some(ListNode { val: 2, next: Some(ListNode { val: 3, next: None }) }) }
+</span><span style="color:#75715e"></span>}
+</code></pre></div><p>In the above code, <code>T</code> is the generic type parameter. It is used to denote the type of the value stored in each node of the linked list. <code>next</code> is declared as an <code>Option&lt;Box&lt;ListNode&lt;T&gt;&gt;&gt;</code> type to allow the <code>None</code> value to be used as the <code>next</code> value of the last node.</p>
+<p>The <code>impl</code> block defines two methods. The <code>new</code> method returns a new <code>ListNode</code> with the given value and <code>next</code> set to None. The <code>append</code> method adds a new node at the end of the linked list.</p>
+<p>Finally, we create a new instance of <code>ListNode</code> with the initial value of 1. Then, we add two more values to the list using the <code>append</code> method. We print the entire linked list using the <code>{:?}</code> format specifier.</p>
+<p>Conclusion:</p>
+<p>Rust&rsquo;s generic data types provide an easy way to write flexible and reusable code. You can use them with any data type to create highly modular and maintainable programs. In this post, we have looked at using generic functions and generic structs to write Rust code that is extensible, flexible, and reusable. Try them out yourself and see the power of Rust&rsquo;s generic data types.</p>
+
+		</div>
+	  </div>
+	
+	  <div class="h-entry">
+		
 			<h1><a href="https://deanware.blog/2023/05/31/rust-enums.html">Rust Enums</a></h1>
 		
 
