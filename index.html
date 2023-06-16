@@ -24,6 +24,43 @@
 	
 	  <div class="h-entry">
 		
+			<h1><a href="https://deanware.blog/2023/06/16/rust-closures.html">Rust: Closures</a></h1>
+		
+
+		<a href="https://deanware.blog/2023/06/16/rust-closures.html" class="u-url"><time class="dt-published" datetime="2023-06-16 11:32:18 -0700">Jun 16, 2023</time></a>
+
+		<div class="e-content">
+			 <p>Closures in Rust are a powerful construct that allows you to define a function and capture its environment at the same time. This can be particularly useful when you need to define a callback function that needs to access variables from its parent function. In this blog post, we&rsquo;ll take a closer look at how closures work in Rust and how you can use them effectively in your code.</p>
+<p>What are Closures in Rust?</p>
+<p>In Rust, closures are anonymous functions that can capture variables from their enclosing environment. They are similar to lambda functions in other programming languages. You can define a closure using the <code>| |</code> syntax, which is similar to how you define arguments for a function. Here&rsquo;s an example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rust" data-lang="rust"><span style="color:#66d9ef">let</span> add <span style="color:#f92672">=</span> <span style="color:#f92672">|</span>a, b<span style="color:#f92672">|</span> a <span style="color:#f92672">+</span> b;
+print!(<span style="color:#e6db74">&#34;{}&#34;</span>, add(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>));
+</code></pre></div><p>In this example, we define a closure <code>add</code> that takes two arguments <code>a</code> and <code>b</code>. The body of the closure simply adds the two arguments and returns the result. We then call the closure using <code>add(1, 2)</code>, which should print <code>3</code> to the console.</p>
+<p>Capturing Variables with Closures</p>
+<p>One of the key features of closures in Rust is their ability to capture variables from their parent environment. This allows you to define a function that depends on variables that are defined outside of the function. Here&rsquo;s an example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rust" data-lang="rust"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+    <span style="color:#66d9ef">let</span> x <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>;
+    <span style="color:#66d9ef">let</span> add_x <span style="color:#f92672">=</span> <span style="color:#f92672">|</span>y<span style="color:#f92672">|</span> x <span style="color:#f92672">+</span> y;
+    println!(<span style="color:#e6db74">&#34;{}&#34;</span>, add_x(<span style="color:#ae81ff">2</span>));
+}
+</code></pre></div><p>In this example, we define a local variable <code>x</code> and a closure <code>add_x</code> that takes an argument <code>y</code> and returns the sum of <code>x</code> and <code>y</code>. When we call <code>add_x(2)</code>, the result should be <code>7</code>.</p>
+<p>Notice that even though <code>x</code> is defined outside of the closure, we can still access it within the closure. This is because the closure &ldquo;captures&rdquo; the variable <code>x</code> and makes it available to the closure. Rust&rsquo;s ownership and borrowing rules ensure that the variable <code>x</code> is not modified or destroyed while the closure is still using it.</p>
+<p>Using Closures in Rust</p>
+<p>Closures are often used as callback functions in Rust. For example, suppose you have a vector of integers, and you want to perform some operation on each element in the vector. You can use the <code>map</code> function to apply a closure to each element in the vector. Here&rsquo;s an example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rust" data-lang="rust"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+    <span style="color:#66d9ef">let</span> vec <span style="color:#f92672">=</span> vec![<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>];
+    <span style="color:#66d9ef">let</span> vec_sum: Vec<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">i32</span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">=</span> vec.iter().map(<span style="color:#f92672">|</span>x<span style="color:#f92672">|</span> x <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>).collect();
+    println!(<span style="color:#e6db74">&#34;{:?}&#34;</span>, vec_sum);
+}
+</code></pre></div><p>In this example, we define a vector <code>vec</code> that contains the integers <code>[1, 2, 3, 4, 5]</code>. We then use the <code>map</code> function to apply a closure to each element in the vector. The closure simply adds one to each element in the vector. Finally, we use the <code>collect</code> function to collect the results into a new vector <code>vec_sum</code>. The result should be <code>[2, 3, 4, 5, 6]</code>.</p>
+<p>Conclusion</p>
+<p>In this blog post, we&rsquo;ve taken a closer look at closures in Rust and how you can use them effectively in your code. Closures are a powerful construct that allows you to define a function and capture its environment at the same time. This can be particularly useful when you need to define a callback function that needs to access variables from its parent function. By using closures in Rust, you can write more concise and expressive code that is easier to read and maintain.</p>
+
+		</div>
+	  </div>
+	
+	  <div class="h-entry">
+		
 			<h1><a href="https://deanware.blog/2023/06/06/rust-generic-data.html">Rust: Generic Data Types</a></h1>
 		
 
@@ -74,7 +111,7 @@
     list.append(<span style="color:#ae81ff">2</span>);
     list.append(<span style="color:#ae81ff">3</span>);
 
-    println!(<span style="color:#e6db74">&#34;{:?}&#34;</span>, list); <span style="color:#75715e">// prints ListNode { val: 1, next: Some(ListNode { val: 2, next: Some(ListNode { val: 3, next: None }) }) }
+    println!(<span style="color:#e6db74">&#34;{:?}&#34;</span>, list); <span style="color:#75715e">// prints ListNode
 </span><span style="color:#75715e"></span>}
 </code></pre></div><p>In the above code, <code>T</code> is the generic type parameter. It is used to denote the type of the value stored in each node of the linked list. <code>next</code> is declared as an <code>Option&lt;Box&lt;ListNode&lt;T&gt;&gt;&gt;</code> type to allow the <code>None</code> value to be used as the <code>next</code> value of the last node.</p>
 <p>The <code>impl</code> block defines two methods. The <code>new</code> method returns a new <code>ListNode</code> with the given value and <code>next</code> set to None. The <code>append</code> method adds a new node at the end of the linked list.</p>
