@@ -7,6 +7,14 @@
 	"items": [
 		
 			{
+				"id": "http://deanandreakis.micro.blog/2023/08/19/a-very-good.html",
+				"title": "A very good boi ",
+				"content_html": "<p>📷</p>\n<!-- raw HTML omitted -->\n",
+				"content_text": "📷\n\n<img src=\"uploads/2023/image.jpg\" width=\"600\" height=\"450\" alt=\"\">\n",
+				"date_published": "2023-08-19T17:04:30-07:00",
+				"url": "https://deanware.blog/2023/08/19/a-very-good.html"
+			},
+			{
 				"id": "http://deanandreakis.micro.blog/2023/07/07/so-when-is.html",
 				
 				"content_html": "<p>So when is the cross-post to Threads coming?</p>\n",
@@ -50,7 +58,7 @@
 				"id": "http://deanandreakis.micro.blog/2023/02/10/tpc-phoenix-open.html",
 				"title": "2023 TPC Phoenix Open 📷",
 				"content_html": "<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>\n",
-				"content_text": "<img src=\"https://cdn.uploads.micro.blog/77166/2023/af1e2a9854.jpg\" width=\"600\" height=\"450\" alt=\"\"><img src=\"https://cdn.uploads.micro.blog/77166/2023/83ac9cb18f.jpg\" width=\"450\" height=\"600\" alt=\"\">\n",
+				"content_text": "<img src=\"uploads/2023/af1e2a9854.jpg\" width=\"600\" height=\"450\" alt=\"\"><img src=\"uploads/2023/83ac9cb18f.jpg\" width=\"450\" height=\"600\" alt=\"\">\n",
 				"date_published": "2023-02-10T13:33:50-07:00",
 				"url": "https://deanware.blog/2023/02/10/tpc-phoenix-open.html"
 			},
@@ -58,7 +66,7 @@
 				"id": "http://deanandreakis.micro.blog/2023/01/30/attended-the-barrettjackson.html",
 				"title": "Car Show 📷",
 				"content_html": "<p>Attended the <a href=\"https://www.barrett-jackson.com/Events/Event/Home/Scottsdale-2023/ab1e8b14-6a68-41aa-becb-8942d5d2b9fa\">Barrett-Jackson</a> car show and auction in Scottsdale AZ.</p>\n<p><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --></p>\n",
-				"content_text": "Attended the [Barrett-Jackson](https://www.barrett-jackson.com/Events/Event/Home/Scottsdale-2023/ab1e8b14-6a68-41aa-becb-8942d5d2b9fa) car show and auction in Scottsdale AZ. \n\n<img src=\"https://cdn.uploads.micro.blog/77166/2023/9a4af32236.jpg\" width=\"450\" height=\"600\" alt=\"\"><img src=\"https://cdn.uploads.micro.blog/77166/2023/6a0e8b2920.jpg\" width=\"600\" height=\"450\" alt=\"\"><img src=\"https://cdn.uploads.micro.blog/77166/2023/8f68f0fadf.jpg\" width=\"450\" height=\"600\" alt=\"\">\n",
+				"content_text": "Attended the [Barrett-Jackson](https://www.barrett-jackson.com/Events/Event/Home/Scottsdale-2023/ab1e8b14-6a68-41aa-becb-8942d5d2b9fa) car show and auction in Scottsdale AZ. \n\n<img src=\"uploads/2023/9a4af32236.jpg\" width=\"450\" height=\"600\" alt=\"\"><img src=\"uploads/2023/6a0e8b2920.jpg\" width=\"600\" height=\"450\" alt=\"\"><img src=\"uploads/2023/8f68f0fadf.jpg\" width=\"450\" height=\"600\" alt=\"\">\n",
 				"date_published": "2023-01-30T11:58:06-07:00",
 				"url": "https://deanware.blog/2023/01/30/attended-the-barrettjackson.html"
 			},
@@ -66,7 +74,7 @@
 				"id": "http://deanandreakis.micro.blog/2023/01/25/horseshoe-bend-during.html",
 				"title": "Horseshoe Bend 📷",
 				"content_html": "<p><a href=\"https://en.wikipedia.org/wiki/Horseshoe_Bend_(Arizona)\">Horseshoe Bend</a> during snowfall\n<!-- raw HTML omitted --></p>\n",
-				"content_text": "[Horseshoe Bend](https://en.wikipedia.org/wiki/Horseshoe_Bend_(Arizona)) during snowfall\n<img src=\"https://cdn.uploads.micro.blog/77166/2023/fc2a9b2a62.jpg\" width=\"600\" height=\"450\" alt=\"\">\n",
+				"content_text": "[Horseshoe Bend](https://en.wikipedia.org/wiki/Horseshoe_Bend_(Arizona)) during snowfall\n<img src=\"uploads/2023/fc2a9b2a62.jpg\" width=\"600\" height=\"450\" alt=\"\">\n",
 				"date_published": "2023-01-25T13:53:55-07:00",
 				"url": "https://deanware.blog/2023/01/25/horseshoe-bend-during.html"
 			},
