@@ -7,6 +7,14 @@
 	"items": [
 		
 			{
+				"id": "http://deanandreakis.micro.blog/2023/10/05/family-weekend-at.html",
+				
+				"content_html": "<p>📷  Family Weekend at University of Arizona</p>\n<!-- raw HTML omitted -->\n",
+				"content_text": "📷  Family Weekend at University of Arizona\n\n<img src=\"uploads/2023/img-4790.jpeg\" width=\"538\" height=\"600\" alt=\"\">\n",
+				"date_published": "2023-10-05T14:53:03-07:00",
+				"url": "https://deanware.blog/2023/10/05/family-weekend-at.html"
+			},
+			{
 				"id": "http://deanandreakis.micro.blog/2023/09/23/apache-wash-trail.html",
 				"title": "Apache Wash Trail Loop",
 				"content_html": "<p>📷\n<!-- raw HTML omitted --><!-- raw HTML omitted --></p>\n",
@@ -50,7 +58,7 @@
 				"id": "http://deanandreakis.micro.blog/2023/03/28/a-day-at.html",
 				"title": "A day at the races! 📷",
 				"content_html": "<p>We were lucky enough to go to the Arizona Nationals NHRA event on March 25, 2023.</p>\n<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>\n",
-				"content_text": "We were lucky enough to go to the Arizona Nationals NHRA event on March 25, 2023.\n\n<img src=\"https://cdn.uploads.micro.blog/77166/2023/301a8d650a.jpg\" width=\"450\" height=\"600\" alt=\"My family and I in the stands at the drag race in Arizona.\"><img src=\"https://cdn.uploads.micro.blog/77166/2023/f50d4be6b8.png\" width=\"600\" height=\"451\" alt=\"Two very fast funny cars going down the track at the drag race in Arizona.\">\n",
+				"content_text": "We were lucky enough to go to the Arizona Nationals NHRA event on March 25, 2023.\n\n<img src=\"uploads/2023/301a8d650a.jpg\" width=\"450\" height=\"600\" alt=\"My family and I in the stands at the drag race in Arizona.\"><img src=\"uploads/2023/f50d4be6b8.png\" width=\"600\" height=\"451\" alt=\"Two very fast funny cars going down the track at the drag race in Arizona.\">\n",
 				"date_published": "2023-03-28T11:06:32-07:00",
 				"url": "https://deanware.blog/2023/03/28/a-day-at.html"
 			},
@@ -66,7 +74,7 @@
 				"id": "http://deanandreakis.micro.blog/2023/03/15/grover-enjoying-the.html",
 				"title": "Grover enjoying the weather 📷",
 				"content_html": "<!-- raw HTML omitted -->\n",
-				"content_text": "<img src=\"https://cdn.uploads.micro.blog/77166/2023/5709176a0e.jpg\" width=\"600\" height=\"450\" alt=\"\">\n",
+				"content_text": "<img src=\"uploads/2023/5709176a0e.jpg\" width=\"600\" height=\"450\" alt=\"\">\n",
 				"date_published": "2023-03-15T13:37:32-07:00",
 				"url": "https://deanware.blog/2023/03/15/grover-enjoying-the.html"
 			},
@@ -74,7 +82,7 @@
 				"id": "http://deanandreakis.micro.blog/2023/02/10/tpc-phoenix-open.html",
 				"title": "2023 TPC Phoenix Open 📷",
 				"content_html": "<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>\n",
-				"content_text": "<img src=\"https://cdn.uploads.micro.blog/77166/2023/af1e2a9854.jpg\" width=\"600\" height=\"450\" alt=\"\"><img src=\"https://cdn.uploads.micro.blog/77166/2023/83ac9cb18f.jpg\" width=\"450\" height=\"600\" alt=\"\">\n",
+				"content_text": "<img src=\"uploads/2023/af1e2a9854.jpg\" width=\"600\" height=\"450\" alt=\"\"><img src=\"uploads/2023/83ac9cb18f.jpg\" width=\"450\" height=\"600\" alt=\"\">\n",
 				"date_published": "2023-02-10T13:33:50-07:00",
 				"url": "https://deanware.blog/2023/02/10/tpc-phoenix-open.html"
 			},
@@ -82,7 +90,7 @@
 				"id": "http://deanandreakis.micro.blog/2023/01/30/attended-the-barrettjackson.html",
 				"title": "Car Show 📷",
 				"content_html": "<p>Attended the <a href=\"https://www.barrett-jackson.com/Events/Event/Home/Scottsdale-2023/ab1e8b14-6a68-41aa-becb-8942d5d2b9fa\">Barrett-Jackson</a> car show and auction in Scottsdale AZ.</p>\n<p><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --></p>\n",
-				"content_text": "Attended the [Barrett-Jackson](https://www.barrett-jackson.com/Events/Event/Home/Scottsdale-2023/ab1e8b14-6a68-41aa-becb-8942d5d2b9fa) car show and auction in Scottsdale AZ. \n\n<img src=\"https://cdn.uploads.micro.blog/77166/2023/9a4af32236.jpg\" width=\"450\" height=\"600\" alt=\"\"><img src=\"https://cdn.uploads.micro.blog/77166/2023/6a0e8b2920.jpg\" width=\"600\" height=\"450\" alt=\"\"><img src=\"https://cdn.uploads.micro.blog/77166/2023/8f68f0fadf.jpg\" width=\"450\" height=\"600\" alt=\"\">\n",
+				"content_text": "Attended the [Barrett-Jackson](https://www.barrett-jackson.com/Events/Event/Home/Scottsdale-2023/ab1e8b14-6a68-41aa-becb-8942d5d2b9fa) car show and auction in Scottsdale AZ. \n\n<img src=\"uploads/2023/9a4af32236.jpg\" width=\"450\" height=\"600\" alt=\"\"><img src=\"uploads/2023/6a0e8b2920.jpg\" width=\"600\" height=\"450\" alt=\"\"><img src=\"uploads/2023/8f68f0fadf.jpg\" width=\"450\" height=\"600\" alt=\"\">\n",
 				"date_published": "2023-01-30T11:58:06-07:00",
 				"url": "https://deanware.blog/2023/01/30/attended-the-barrettjackson.html"
 			},
@@ -90,7 +98,7 @@
 				"id": "http://deanandreakis.micro.blog/2023/01/25/horseshoe-bend-during.html",
 				"title": "Horseshoe Bend 📷",
 				"content_html": "<p><a href=\"https://en.wikipedia.org/wiki/Horseshoe_Bend_(Arizona)\">Horseshoe Bend</a> during snowfall\n<!-- raw HTML omitted --></p>\n",
-				"content_text": "[Horseshoe Bend](https://en.wikipedia.org/wiki/Horseshoe_Bend_(Arizona)) during snowfall\n<img src=\"https://cdn.uploads.micro.blog/77166/2023/fc2a9b2a62.jpg\" width=\"600\" height=\"450\" alt=\"\">\n",
+				"content_text": "[Horseshoe Bend](https://en.wikipedia.org/wiki/Horseshoe_Bend_(Arizona)) during snowfall\n<img src=\"uploads/2023/fc2a9b2a62.jpg\" width=\"600\" height=\"450\" alt=\"\">\n",
 				"date_published": "2023-01-25T13:53:55-07:00",
 				"url": "https://deanware.blog/2023/01/25/horseshoe-bend-during.html"
 			},
@@ -98,7 +106,7 @@
 				"id": "http://deanandreakis.micro.blog/2023/01/24/another-beautiful-sunset.html",
 				"title": "Another Beautiful Sunset 📷",
 				"content_html": "<!-- raw HTML omitted -->\n",
-				"content_text": "<img src=\"https://cdn.uploads.micro.blog/77166/2023/2a425f70ed.jpg\" width=\"600\" height=\"353\" alt=\"\">\n",
+				"content_text": "<img src=\"uploads/2023/2a425f70ed.jpg\" width=\"600\" height=\"353\" alt=\"\">\n",
 				"date_published": "2023-01-24T09:48:31-07:00",
 				"url": "https://deanware.blog/2023/01/24/another-beautiful-sunset.html"
 			},
@@ -106,7 +114,7 @@
 				"id": "http://deanandreakis.micro.blog/2023/01/19/i-am-lucky.html",
 				"title": "Hot Air Balloons 📷",
 				"content_html": "<p>I am lucky enough to live near an area that hosts hot air balloon rides. I wake up many mornings with this view out of my bedroom window:\n<!-- raw HTML omitted --></p>\n",
-				"content_text": "I am lucky enough to live near an area that hosts hot air balloon rides. I wake up many mornings with this view out of my bedroom window:\n<img src=\"https://cdn.uploads.micro.blog/77166/2023/96ad862885.jpg\" width=\"600\" height=\"493\" alt=\"\">\n",
+				"content_text": "I am lucky enough to live near an area that hosts hot air balloon rides. I wake up many mornings with this view out of my bedroom window:\n<img src=\"uploads/2023/96ad862885.jpg\" width=\"600\" height=\"493\" alt=\"\">\n",
 				"date_published": "2023-01-19T10:12:22-07:00",
 				"url": "https://deanware.blog/2023/01/19/i-am-lucky.html"
 			},
@@ -114,7 +122,7 @@
 				"id": "http://deanandreakis.micro.blog/2023/01/18/placed-my-order.html",
 				"title": "New Computer 📷",
 				"content_html": "<p>Placed my order for a new M2 mac mini. I currently use a 2017 27&quot; iMac w/ a core i5 processor so this should be a major speed bump.</p>\n<!-- raw HTML omitted -->\n",
-				"content_text": "Placed my order for a new M2 mac mini. I currently use a 2017 27\" iMac w/ a core i5 processor so this should be a major speed bump.\n\n<img src=\"https://cdn.uploads.micro.blog/77166/2023/b8b95e6edd.png\" width=\"600\" height=\"197\" alt=\"\">\n",
+				"content_text": "Placed my order for a new M2 mac mini. I currently use a 2017 27\" iMac w/ a core i5 processor so this should be a major speed bump.\n\n<img src=\"uploads/2023/b8b95e6edd.png\" width=\"600\" height=\"197\" alt=\"\">\n",
 				"date_published": "2023-01-18T12:22:24-07:00",
 				"url": "https://deanware.blog/2023/01/18/placed-my-order.html"
 			},
